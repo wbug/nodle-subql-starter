@@ -1,39 +1,91 @@
 import type { OverrideBundleDefinition } from '@polkadot/types/types';
 
-// structs need to be in order
 /* eslint-disable sort-keys */
 
 const definitions: OverrideBundleDefinition = {
+    alias: { tokens: { AccountData: 'OrmlAccountData' } },
     types: [
         {
             // on all versions
             minmax: [0, undefined],
             types: {
-                ResourceId: '[u8; 32]',
-                DepositNonce: 'u64',
-                ProposalStatus: {
-                    _enum: [
-                        'Initiated',
-                        'Approved',
-                        'Rejected'
-                    ]
+                AssetPair: { asset_in: 'AssetId', asset_out: 'AssetId' },
+                Amount: 'i128',
+                AmountOf: 'Amount',
+                Address: 'AccountId',
+                OrmlAccountData: { free: 'Balance', frozen: 'Balance', reserved: 'Balance' },
+                Fee: { numerator: 'u32', denominator: 'u32' },
+                BalanceInfo: { amount: 'Balance', assetId: 'AssetId' },
+                Chain: { genesisHash: 'Vec<u8>', lastBlockHash: 'Vec<u8>' },
+                Currency: 'AssetId',
+                CurrencyId: 'AssetId',
+                CurrencyIdOf: 'AssetId',
+                Intention: {
+                    who: 'AccountId',
+                    asset_sell: 'AssetId',
+                    asset_buy: 'AssetId',
+                    amount: 'Balance',
+                    discount: 'bool',
+                    sell_or_buy: 'IntentionType'
                 },
-                ProposalVotes: {
-                    votes_for: 'Vec<AccountId>',
-                    votes_against: 'Vec<AccountId>',
-                    status: 'ProposalStatus'
+                IntentionId: 'Hash',
+                IntentionType: { _enum: ['SELL', 'BUY'] },
+                LookupSource: 'AccountId',
+                Price: 'Balance',
+                ClassId: 'u64',
+                TokenId: 'u64',
+                ClassData: { is_pool: 'bool' },
+                TokenData: { locked: 'bool' },
+                ClassInfo: { metadata: 'Vec<u8>', total_issuance: 'TokenId', owner: 'AccountId', data: 'ClassData' },
+                TokenInfo: { metadata: 'Vec<u8>', owner: 'AccountId', data: 'TokenData' },
+                ClassInfoOf: 'ClassInfo',
+                TokenInfoOf: 'TokenInfo',
+                ClassIdOf: 'ClassId',
+                TokenIdOf: 'TokenId',
+                OrderedSet: 'Vec<AssetId>',
+                VestingSchedule: {
+                    start: 'BlockNumber',
+                    period: 'BlockNumber',
+                    period_count: 'u32',
+                    per_period: 'Compact<Balance>'
                 },
-                BridgeTokenId: 'U256',
-                BridgeChainId: 'u8',
-                VestingPlan: {
-                    start_time: 'u64',
-                    cliff_duration: 'u64',
-                    total_duration: 'u64',
-                    interval: 'u64',
-                    initial_amount: 'Balance',
-                    total_amount: 'Balance',
-                    vesting_during_cliff: 'bool'
-                }
+                VestingScheduleOf: 'VestingSchedule',
+                LBPWeight: 'u32',
+                WeightCurveType: { _enum: ['Linear'] },
+                PoolId: 'AccountId',
+                BalanceOf: 'Balance',
+                AssetType: {
+                    _enum: {
+                        Token: 'Null',
+                        PoolShare: '(AssetId,AssetId)'
+                    }
+                },
+                Pool: {
+                    owner: 'AccountId',
+                    start: 'BlockNumber',
+                    end: 'BlockNumber',
+                    assets: 'AssetPair',
+                    initial_weights: 'LBPWeight',
+                    final_weights: 'LBPWeight',
+                    weight_curve: 'WeightCurveType',
+                    pausable: 'bool',
+                    paused: 'bool',
+                    fee: 'Fee',
+                    fee_receiver: 'AccountId'
+                },
+                AssetDetails: {
+                    name: 'Vec<u8>',
+                    asset_type: 'AssetType',
+                    existential_deposit: 'Balance',
+                    locked: 'bool'
+                },
+                AssetDetailsT: 'AssetDetails',
+                AssetMetadata: { symbol: 'Vec<u8>', decimals: 'u8' },
+                AssetInstance: 'AssetInstanceV1',
+                MultiLocation: 'MultiLocationV1',
+                MultiAsset: 'MultiAssetV1',
+                Xcm: 'XcmV1',
+                XcmOrder: 'XcmOrderV1'
             }
         }
     ]

@@ -1,7 +1,7 @@
 {
-  "name": "automata-subql-starter",
+  "name": "basilisk-subql-starter",
   "version": "0.0.4",
-  "description": "This SubQuery project can be use as a starting point for Automata network",
+  "description": "This SubQuery project can be use as a starting point for basilisk network",
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc -b",
@@ -9,8 +9,8 @@
     "test": "jest",
     "codegen": "./node_modules/.bin/subql codegen"
   },
-  "homepage": "https://github.com/subquery/automata-subql-starter",
-  "repository": "github:subquery/automata-subql-starter",
+  "homepage": "https://github.com/subquery/basilisk-subql-starter",
+  "repository": "github:subquery/basilisk-subql-starter",
   "files": [
     "dist",
     "schema.graphql",
