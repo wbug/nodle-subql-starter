@@ -1,3 +1,3 @@
-import { typesBundleDeprecated } from "moonbeam-types-bundle";
+import { typesBundleForPolkadot } from "@parallel-finance/type-definitions";
 
-export default { typesBundle: typesBundleDeprecated };
+export default { typesBundle: typesBundleForPolkadot };
