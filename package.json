@@ -1,7 +1,7 @@
 {
-  "name": "kusama-subql-starter",
+  "name": "moonbeam-subql-starter",
   "version": "0.0.4",
-  "description": "This SubQuery project can be use as a starting point for Kusama network",
+  "description": "This SubQuery project can be use as a starting point for Moonbeam network",
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc -b",
@@ -9,8 +9,8 @@
     "test": "jest",
     "codegen": "./node_modules/.bin/subql codegen"
   },
-  "homepage": "https://github.com/subquery/kusama-subql-starter",
-  "repository": "github:subquery/kusama-subql-starter",
+  "homepage": "https://github.com/subquery/moonbeam-subql-starter",
+  "repository": "github:subquery/moonbeam-subql-starter",
   "files": [
     "dist",
     "schema.graphql",
@@ -22,6 +22,7 @@
     "@polkadot/api": "^7",
     "@subql/types": "latest",
     "typescript": "^4.1.3",
-    "@subql/cli": "latest"
+    "@subql/cli": "latest",
+    "moonbeam-types-bundle": "^2.0.2"
   }
 }

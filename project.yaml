@@ -1,13 +1,15 @@
 specVersion: 0.2.0
-name: kusama-subql-starter
+name: moonbeam-subql-starter
 version: 0.0.4
-description: This project can be use as a starting po...
-repository: https://github.com/subquery/kusama-subql-starters
+description: This project can be use as a starting point for Moonbeam network.
+repository: https://github.com/subquery/moonbeam-subql-starters
 schema:
   file: ./schema.graphql
 network:
-  endpoint: wss://kusama.api.onfinality.io/public-ws
-  genesisHash: '0xb0a8d493285c2df73290dfb7e61f870f17b41801197a149ca93654499ea3dafe'
+  endpoint: wss://moonbeam.api.onfinality.io/public-ws
+  genesisHash: '0xfe58ea77779b7abda7da4ec526d14db9b1e9cd40a217c34892af80a9b332b76d'
+  chaintypes:
+    file: ./dist/chaintypes.js
 dataSources:
   - kind: substrate/Runtime
     startBlock: 1
