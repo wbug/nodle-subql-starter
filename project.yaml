@@ -1,13 +1,13 @@
 specVersion: 0.2.0
-name: basilisk-subql-starter
+name: bifrost-subql-starter
 version: 0.0.4
-description: This project can be use as a starting point for Basilisk network.
-repository: https://github.com/subquery/basilisk-subql-starter
+description: This project can be use as a starting point for Bifrost network.
+repository: https://github.com/subquery/bifrost-subql-starter
 schema:
   file: ./schema.graphql
 network:
-  endpoint: wss://basilisk.api.onfinality.io/public-ws
-  genesisHash: '0xa85cfb9b9fd4d622a5b28289a02347af987d8f73fa3108450e2b4a11c1ce5755'
+  endpoint: wss://bifrost-parachain.api.onfinality.io/public-ws
+  genesisHash: '0x9f28c6a68e0fc9646eff64935684f6eeeece527e37bbe1f213d22caa1d9d6bed'
   chaintypes:
     file: ./dist/chaintypes.js
 dataSources:
