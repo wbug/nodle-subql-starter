@@ -1,7 +1,7 @@
 {
-  "name": "statemine-subql-starter",
+  "name": "statemint-subql-starter",
   "version": "0.0.4",
-  "description": "This SubQuery project can be use as a starting point for Statemine network",
+  "description": "This SubQuery project can be use as a starting point for Statemint network",
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc -b",
@@ -9,8 +9,8 @@
     "test": "jest",
     "codegen": "./node_modules/.bin/subql codegen"
   },
-  "homepage": "https://github.com/subquery/statemine-subql-starter",
-  "repository": "github:subquery/statemine-subql-starter",
+  "homepage": "https://github.com/subquery/statemint-subql-starter",
+  "repository": "github:subquery/statemint-subql-starter",
   "files": [
     "dist",
     "schema.graphql",
