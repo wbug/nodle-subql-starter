@@ -1,7 +1,7 @@
 {
-  "name": "calamari-subql-starter",
+  "name": "contextfree-subql-starter",
   "version": "0.0.4",
-  "description": "This SubQuery project can be use as a starting point for Calamari network",
+  "description": "This SubQuery project can be use as a starting point for Contextfree network",
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc -b",
@@ -9,8 +9,8 @@
     "test": "jest",
     "codegen": "./node_modules/.bin/subql codegen"
   },
-  "homepage": "https://github.com/subquery/calamari-subql-starter",
-  "repository": "github:subquery/calamari-subql-starter",
+  "homepage": "https://github.com/subquery/contextfree-subql-starter",
+  "repository": "github:subquery/contextfree-subql-starter",
   "files": [
     "dist",
     "schema.graphql",
