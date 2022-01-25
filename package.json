@@ -1,7 +1,7 @@
 {
-  "name": "contextfree-subql-starter",
+  "name": "karura-subql-starter",
   "version": "0.0.4",
-  "description": "This SubQuery project can be use as a starting point for Contextfree network",
+  "description": "This SubQuery project can be use as a starting point for Karura network",
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc -b",
@@ -9,8 +9,8 @@
     "test": "jest",
     "codegen": "./node_modules/.bin/subql codegen"
   },
-  "homepage": "https://github.com/subquery/contextfree-subql-starter",
-  "repository": "github:subquery/contextfree-subql-starter",
+  "homepage": "https://github.com/subquery/karura-subql-starter",
+  "repository": "github:subquery/karura-subql-starter",
   "files": [
     "dist",
     "schema.graphql",
@@ -22,7 +22,8 @@
     "@polkadot/api": "^7",
     "@subql/types": "latest",
     "typescript": "^4.1.3",
-    "@subql/cli": "latest"
+    "@subql/cli": "latest",
+    "@acala-network/type-definitions": "latest"
   },
   "exports": {
     "chaintypes": "src/chaintypes.ts"
