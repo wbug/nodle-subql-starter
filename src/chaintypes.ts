@@ -1,5 +1,6 @@
 import type { OverrideBundleDefinition } from '@polkadot/types/types';
 
+// structs need to be in order
 /* eslint-disable sort-keys */
 
 const definitions: OverrideBundleDefinition = {
@@ -8,22 +9,31 @@ const definitions: OverrideBundleDefinition = {
             // on all versions
             minmax: [0, undefined],
             types: {
-                ParachainAccountIdOf: 'AccountId',
-                Proof: {
-                    leafHash: 'Hash',
-                    sortedHashes: 'Vec<Hash>'
-                },
-                ProxyType: {
+                ResourceId: '[u8; 32]',
+                DepositNonce: 'u64',
+                ProposalStatus: {
                     _enum: [
-                        'Any',
-                        'NonTransfer',
-                        'Governance',
-                        '_Staking',
-                        'NonProxy'
+                        'Initiated',
+                        'Approved',
+                        'Rejected'
                     ]
                 },
-                RelayChainAccountId: 'AccountId',
-                RootHashOf: 'Hash'
+                ProposalVotes: {
+                    votes_for: 'Vec<AccountId>',
+                    votes_against: 'Vec<AccountId>',
+                    status: 'ProposalStatus'
+                },
+                BridgeTokenId: 'U256',
+                BridgeChainId: 'u8',
+                VestingPlan: {
+                    start_time: 'u64',
+                    cliff_duration: 'u64',
+                    total_duration: 'u64',
+                    interval: 'u64',
+                    initial_amount: 'Balance',
+                    total_amount: 'Balance',
+                    vesting_during_cliff: 'bool'
+                }
             }
         }
     ]
