@@ -1,7 +1,7 @@
 {
-  "name": "moonbeam-alpha-subql-starter",
+  "name": "moonriver-subql-starter",
   "version": "0.0.4",
-  "description": "This SubQuery project can be use as a starting point for Moonbeam alpha network",
+  "description": "This SubQuery project can be use as a starting point for Moonriver network",
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc -b",
@@ -9,8 +9,8 @@
     "test": "jest",
     "codegen": "./node_modules/.bin/subql codegen"
   },
-  "homepage": "https://github.com/subquery/moonbeam-alpha-subql-starter",
-  "repository": "github:subquery/moonbeam-alpha-subql-starter",
+  "homepage": "https://github.com/subquery/moonriver-subql-starter",
+  "repository": "github:subquery/moonriver-subql-starter",
   "files": [
     "dist",
     "schema.graphql",
