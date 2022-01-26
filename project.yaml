@@ -1,13 +1,13 @@
 specVersion: 0.2.0
-name: mmoonriver-subql-starter
+name: neumann-subql-starter
 version: 0.0.4
-description: This project can be use as a starting point for moonriver network.
-repository: https://github.com/subquery/moonriver-subql-starter
+description: This project can be use as a starting point for neumann network.
+repository: https://github.com/subquery/neumann-subql-starter
 schema:
   file: ./schema.graphql
 network:
-  endpoint: wss://moonriver.api.onfinality.io/public-ws
-  genesisHash: '0x401a1f9dca3da46f5c4091016c8a2f26dcea05865116b286f60f668207d1474b'
+  endpoint: wss://neumann.api.onfinality.io/public-ws
+  genesisHash: '0xe81cddea5dc9954ccf7aa868d231082a2bab589dd4f81592c24c490fd2e231c8'
   chaintypes:
     file: ./dist/chaintypes.js
 dataSources:

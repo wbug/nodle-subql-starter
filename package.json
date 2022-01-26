@@ -1,7 +1,7 @@
 {
-  "name": "moonriver-subql-starter",
+  "name": "neumann-subql-starter",
   "version": "0.0.4",
-  "description": "This SubQuery project can be use as a starting point for Moonriver network",
+  "description": "This SubQuery project can be use as a starting point for Neumann network",
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc -b",
@@ -9,8 +9,8 @@
     "test": "jest",
     "codegen": "./node_modules/.bin/subql codegen"
   },
-  "homepage": "https://github.com/subquery/moonriver-subql-starter",
-  "repository": "github:subquery/moonriver-subql-starter",
+  "homepage": "https://github.com/subquery/neumann-subql-starter",
+  "repository": "github:subquery/neumann-subql-starter",
   "files": [
     "dist",
     "schema.graphql",
@@ -22,8 +22,7 @@
     "@polkadot/api": "^7",
     "@subql/types": "latest",
     "typescript": "^4.1.3",
-    "@subql/cli": "latest",
-    "moonbeam-types-bundle": "^2.0.2"
+    "@subql/cli": "latest"
   },
   "exports": {
     "chaintypes": "src/chaintypes.ts"
