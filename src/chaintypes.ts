@@ -1,3 +1,5 @@
-import { typesBundleForPolkadot } from "@acala-network/type-definitions";
+import type { OverrideBundleDefinition } from '@polkadot/types/types';
 
-export default { typesBundle: typesBundleForPolkadot };
+import { versionedKhala } from '@phala/typedefs';
+
+export default { typesBundle: { ...versionedKhala } as OverrideBundleDefinition };
