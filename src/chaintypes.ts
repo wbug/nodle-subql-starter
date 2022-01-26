@@ -9,39 +9,37 @@ const definitions: OverrideBundleDefinition = {
             // on all versions
             minmax: [0, undefined],
             types: {
-                Contribution: {
-                    account_id: 'AccountId',
-                    value: 'Balance'
+                Amendment: 'Call',
+                Application: {
+                    candidate: 'AccountId',
+                    candidate_deposit: 'Balance',
+                    challenged_block: 'BlockNumber',
+                    challenger: 'Option<AccountId>',
+                    challenger_deposit: 'Option<Balance>',
+                    created_block: 'BlockNumber',
+                    metadata: 'Vec<u8>',
+                    voters_against: 'Vec<(AccountId, Balance)>',
+                    voters_for: 'Vec<(AccountId, Balance)>',
+                    votes_against: 'Option<Balance>',
+                    votes_for: 'Option<Balance>'
                 },
-                Grant: {
-                    contributions: 'Vec<Contribution>',
-                    is_approved: 'bool',
-                    is_canceled: 'bool',
-                    is_withdrawn: 'bool',
-                    matching_fund: 'Balance',
-                    project_index: 'ProjectIndex',
-                    withdrawal_expiration: 'BlockNumber'
-                },
-                Project: {
-                    create_block_number: 'BlockNumber',
-                    description: 'Vec<u8>',
-                    logo: 'Vec<u8>',
-                    name: 'Vec<u8>',
+                CertificateId: 'AccountId',
+                RootCertificate: {
+                    child_revocations: 'Vec<CertificateId>',
+                    created: 'BlockNumber',
+                    key: 'CertificateId',
                     owner: 'AccountId',
-                    website: 'Vec<u8>'
+                    renewed: 'BlockNumber',
+                    revoked: 'bool',
+                    validity: 'BlockNumber'
                 },
-                ProjectIndex: 'u32',
-                ProjectOf: 'Project',
-                Round: {
-                    end: 'BlockNumber',
-                    grants: 'Vec<Grant>',
-                    is_canceled: 'bool',
-                    is_finalized: 'bool',
-                    matching_fund: 'Balance',
-                    start: 'BlockNumber'
+                VestingSchedule: {
+                    start: 'BlockNumber',
+                    period: 'BlockNumber',
+                    period_count: 'u32',
+                    per_period: 'Balance'
                 },
-                RoundIndex: 'u32',
-                RoundOf: 'Round'
+                VestingScheduleOf: 'VestingSchedule'
             }
         }
     ]

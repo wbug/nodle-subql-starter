@@ -1,7 +1,7 @@
 {
-  "name": "neumann-subql-starter",
+  "name": "nodle-subql-starter",
   "version": "0.0.4",
-  "description": "This SubQuery project can be use as a starting point for Neumann network",
+  "description": "This SubQuery project can be use as a starting point for nodle network",
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc -b",
@@ -9,8 +9,8 @@
     "test": "jest",
     "codegen": "./node_modules/.bin/subql codegen"
   },
-  "homepage": "https://github.com/subquery/neumann-subql-starter",
-  "repository": "github:subquery/neumann-subql-starter",
+  "homepage": "https://github.com/subquery/nodle-subql-starter",
+  "repository": "github:subquery/nodle-subql-starter",
   "files": [
     "dist",
     "schema.graphql",
