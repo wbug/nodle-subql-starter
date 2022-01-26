@@ -1,5 +1,3 @@
-import type { OverrideBundleDefinition } from '@polkadot/types/types';
+import { typesBundleDeprecated } from "moonbeam-types-bundle";
 
-import { versionedKhala } from '@phala/typedefs';
-
-export default { typesBundle: { ...versionedKhala } as OverrideBundleDefinition };
+export default { typesBundle: typesBundleDeprecated };
