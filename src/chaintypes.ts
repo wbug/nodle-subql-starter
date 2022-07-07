@@ -39,7 +39,8 @@ const definitions: OverrideBundleDefinition = {
           period_count: 'u32',
           per_period: 'Balance'
         },
-        VestingScheduleOf: 'VestingSchedule'
+        VestingScheduleOf: 'VestingSchedule',
+        VpnId: 'u32'
       }
     }
   ]
