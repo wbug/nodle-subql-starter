@@ -1,28 +1,28 @@
 specVersion: 0.2.0
-name: nodle-subql-starter
-version: 0.0.4
-description: This project can be use as a starting point for nodle network.
-repository: https://github.com/subquery/nodle-subql-starter
+name: account-balance
+version: 1.0.0
+description: 'A tutorial for querying account balances on polkadot'
+repository: 'https://github.com/subquery/tutorials-account-balances'
 schema:
   file: ./schema.graphql
 network:
   genesisHash: '0xea8ce57e26e8d2e3f23a9bb342202da37cc4a62bd4af2ee46b499ddfc36a73d2'
-  endpoint: 'ws://43.154.93.234:9944/'
+  endpoint: 'ws://211.159.227.141:9944/'
   chaintypes:
     file: ./dist/chaintypes.js
-  dictionary: https://api.subquery.network/sq/subquery/nodle-dictionary
+#  dictionary: https://api.subquery.network/sq/subquery/polkadot-dictionary
 dataSources:
   - kind: substrate/Runtime
     startBlock: 1
     mapping:
       file: ./dist/index.js
       handlers:
-        - handler: handleBlock
-          kind: substrate/BlockHandler
         - handler: handleEvent
           kind: substrate/EventHandler
           filter:
             module: balances
-            method: Deposit
-        - handler: handleCall
-          kind: substrate/CallHandler
+            #module: web3VpnNft
+            #module: web3Spread
+            method: Transfer
+            #method: Deposit
+
